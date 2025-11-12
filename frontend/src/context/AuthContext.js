@@ -49,7 +49,7 @@ export function AuthProvider({ children }) {
           // Verify user is still active by checking with backend
           const verifyUser = async () => {
             try {
-              const response = await fetch(`${process.env.REACT_APP_API_BASE || 'https://food-donation-platform-winy.onrender.com'}/auth/me`, {
+              const response = await fetch(`${process.env.REACT_APP_API_BASE || 'http://localhost:3000/api'}/auth/me`, {
                 headers: {
                   'Authorization': `Bearer ${token}`
                 }
